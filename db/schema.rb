@@ -24,10 +24,10 @@ ActiveRecord::Schema.define(version: 0) do
   add_index "comments", ["user_id"], name: "index_comments_on_user_id"
 
   create_table "connections", force: :cascade do |t|
-    t.integer "user_one_id"
-    t.integer "user_two_id"
     t.integer "date"
     t.string  "last_message"
+    t.integer "user_one_id"
+    t.integer "user_two_id"
   end
 
   add_index "connections", ["user_one_id"], name: "index_connections_on_user_one_id"
@@ -76,7 +76,7 @@ ActiveRecord::Schema.define(version: 0) do
     t.string  "email"
     t.string  "image"
     t.integer "message_number"
-    t.string  "password"
+    t.string  "password_digest"
   end
 
 end
