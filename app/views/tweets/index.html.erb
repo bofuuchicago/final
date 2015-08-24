@@ -5,14 +5,9 @@
 
   <!-- middle part -->
   <div class="col-xs-8">
-    <div class="timeline-tweet-box">
     <div class="jumbotron">
-      <%= image_tag(session["user_image"], class: "protrait")%>
-      <%= session["username"]%>
-      
-      
       <%= form_tag tweets_path, method:"post" do %>
-      <label for="post_tweet">Post a Tweet?</label>
+      <label for="post_tweet">What news do you want to share with others?</label>
       <br>
       <textarea name="post_tweet" class="post-tweet" rows="5"></textarea>
       <button class="btn btn-success">POST</button>
@@ -129,6 +124,7 @@
 
 <script>
   $(function(){
+
     $('.tweet-image').click(function () {
       if($(this).outerWidth() < $(this).parent().outerWidth()){
         $(this).css("width", $(this).parent().outerWidth());
@@ -136,5 +132,8 @@
       else {
         $(this).css("width", $(this).parent().outerWidth()*0.3);
       }
+    });
+
   });
 </script>
+

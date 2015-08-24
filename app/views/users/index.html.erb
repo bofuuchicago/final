@@ -15,6 +15,7 @@
 			<button class="btn">Follow each other </button>
 			<% follow = Follow.find_by_star_id_and_fan_id(user.id, session["user_id"]) %>
 			<%= link_to "Unfollow" , user_follow_path(user.id, follow.id),method: "delete", class: "btn btn-danger", remote: true %>
+
 			<% elsif Follow.find_by_star_id_and_fan_id(user.id, session["user_id"]).present? %>
 			<% follow = Follow.find_by_star_id_and_fan_id(user.id, session["user_id"]) %>
 			<%= link_to "Unfollow", user_follow_path(user.id, follow.id), method: "delete", class: "btn btn-danger", remote: true %>
