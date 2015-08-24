@@ -6,11 +6,14 @@
   <!-- middle part -->
   <div class="col-xs-8">
     <div class="jumbotron">
+      <%= image_tag(session["user_image"], class: "protrait")%>
+      <label for="post_tweet"><%= session["username"]%></label><br /><br />
       <%= form_tag tweets_path, method:"post" do %>
-      <label for="post_tweet">What news do you want to share with others?</label>
+      <label for="post_tweet">Share your life via Tweet!</label>
       <br>
       <textarea name="post_tweet" class="post-tweet" rows="5"></textarea>
       <button class="btn btn-success">POST</button>
+      <button class="btn btn-success">Add Image</button>
       <% end %>
     </div>
     <!---list tweets -->
