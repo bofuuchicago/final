@@ -11,9 +11,16 @@
       <%= form_tag tweets_path, method:"post" do %>
       <label for="post_tweet">Share your life via Tweet!</label>
       <br>
-      <textarea name="post_tweet" class="post-tweet" rows="5"></textarea>
+      <textarea name="post_tweet" class="post-tweet" rows="5"></textarea><br />
+      <div class="input-group">
+      <input name="post_image" id="tweet_image" class="form-control" placeholder="Image URL" style="width:100%">
+        <span class="input-group-btn">
+          <button type="button" class="btn btn-default" onclick="view_image()">View</button>        
+        </span>
+      </div>
+      
+      <img src="" id="image" style="display: none; max-width:400px; max-height:400px;"><br />
       <button class="btn btn-success">POST</button>
-      <button class="btn btn-success">Add Image</button>
       <% end %>
     </div>
     <!---list tweets -->
@@ -38,10 +45,10 @@
         </div>
         <% if tweet.user_id == session["user_id"].to_i %>
         <div class="col-xs-1">
-          <%= link_to 'Edit', edit_tweet_path(tweet.id) %>
+          <%= link_to 'Edit', edit_tweet_path(tweet.id), class: "btn btn-success btn-xs" %>
         </div>
         <div class="col-xs-1">
-          <%= link_to 'Delete', tweet_path(tweet.id), method: :delete %>
+          <%= link_to 'Delete', tweet_path(tweet.id), class: "btn btn-warning btn-xs", method: :delete %>
         </div>
         <% end %>
       </div>
@@ -50,10 +57,10 @@
 <!--         <a href="" >Like</a> -->
       </div>
       <div class="col-xs-3">
-        <%= link_to 'Comment', new_tweet_comment_path(tweet.id), remote: true%>
+        <%= link_to 'Add Comment', new_tweet_comment_path(tweet.id), class: "btn btn-info", remote: true%>
       </div>
       <div class="col-xs-3">
-        <%= link_to 'View it', tweet_path(tweet.id)%>
+        <%= link_to 'All Comments', tweet_path(tweet.id), class: "btn btn-info"%>
       </div>
       <div class="col-xs-3">
 <!--         Share -->
@@ -100,24 +107,30 @@
   </div>
 
   <!-- right nav bar -->
+  
   <div class="col-xs-3">
-    <div class="jumbotron">
-      <%= image_tag(session["user_image"], class: "protrait")%>
-      <%= session["username"]%>
-      <hr>
-      <div class="row">
-        <div class="col-xs-6">
-          <%= link_to "following", user_follows_path(session["user_id"]) %>
-          <%= link_to "follower", user_follows_path(session["user_id"]) %>
-          <%= link_to "tweets", tweets_path(:user_id => session["user_id"]) %>
-        </div>
-        <div class="col-xs-2">
-          <%= Follow.where(fan_id: session["user_id"]).count%><br>
-          <%= Follow.where(fan_id: session["user_id"]).count%><br>
-          <%= Tweet.where(user_id: session["user_id"]).count%><br>
+      
+      <div  class="jumbotron">
+        <div class="text-center" id="author">
+            <%= image_tag(session["user_image"], class: "protrait")%>
+            <h3><label for="post_tweet"><%= session["username"]%></label></h3>
+            <small class="label label-warning">VIP</small>
+            <div class="row">
+            <div class="col-xs-6">
+              <%= link_to "following", user_follows_path(session["user_id"]) %>
+              <%= link_to "follower", user_follows_path(session["user_id"]) %>
+              <%= link_to "tweets", tweets_path(:user_id => session["user_id"]) %>
+            </div>
+            <div class="col-xs-2">
+              <%= Follow.where(fan_id: session["user_id"]).count%><br>
+              <%= Follow.where(fan_id: session["user_id"]).count%><br>
+              <%= Tweet.where(user_id: session["user_id"]).count%><br>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+    
   </div>
 </div>
 
@@ -138,5 +151,12 @@
     });
 
   });
+  
+  function view_image() {
+    var image_url = document.getElementById("tweet_image").value;
+    var image_tag = document.getElementById("image");
+    image_tag.src = image_url;
+    image_tag.style.display = "inline";
+  }
 </script>
 

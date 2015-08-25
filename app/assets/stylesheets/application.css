@@ -14,9 +14,13 @@
  *= require_self
  */
 
+.background_image {
+    background: image-url('http://www.theaureview.com/sites/default/files/lee%20hom.gif');
+}
+
  .protrait{
- 	width:40px;
- 	height:40px;
+ 	max-width:40px;
+ 	max-height:40px;
  	border-radius: 25px;
  }
 
@@ -35,7 +39,7 @@
  }
 
  .tweet-image{
- 	width:30%;
+ 	width:50%;
  	margin-top: 20px
  }
 

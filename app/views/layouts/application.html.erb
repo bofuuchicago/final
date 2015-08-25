@@ -7,57 +7,35 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body background="http://www.hdwallpapersllc.com/wp-content/uploads/2015/07/Brooklyn-Bridge-Wallpaper-night-lights-the-river-desktop1.jpg">
 
   <div class="container">
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="col-xs-2">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="/">
-              <big>Tweet</big>
-              <sub><small>alpha</small></sub>
-            </a>
-          </div>
-        </div>
-        <div class="col-xs-7">
-          <ul class="nav navbar-nav">
-            <li><a href="/">Home</a></li>
-          </ul>
-          <% if session["user_id"].present? %>
-          <%= form_tag users_path, method:"get", class: "navbar-form" do %>
-          <div class="input-group pull-right">
-            <input type="text" class="form-control" placeholder="People" name="keyword">
-            <div class="input-group-btn">
-              <button class="btn btn-default" type="submit">Search</button>
-            </div>
-          </div>
-          <% end %>
-          <% end %>
-        </div>
-
-        <div class="col-xs-3">
-          <ul class="nav navbar-nav">
+        <nav>
+          <h3>Twitter</h3>
+          <ul class="nav nav-justified">
             <% if session["user_id"].present? %>
-            <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                <%= User.find_by(id: session["user_id"]).username %>
-              </a>
-              <ul class="dropdown-menu">
-                <li><%= link_to "Account", user_path(session["user_id"]) %></li>
-                <li><%= link_to "Messages", connections_path%></li>
-                <li><%= link_to "Sign Out", logout_path %></li>
-              </ul>
-            </li>
+            <li class="active"><a href="/">Home</a></li>
+            <li><%= link_to "Account", user_path(session["user_id"]) %></li>
+            <li><%= link_to "Messages", connections_path%></li>
+            <li><%= link_to "Sign Out", logout_path %></li>
             <% else %>
             <li><%= link_to "Sign Up", '/signup' %></li>
             <li><%= link_to "Sign In", '/login' %></li>
             <% end %>
+            <li><% if session["user_id"].present? %>
+          <%= form_tag users_path, method:"get", class: "navbar-form" do %>
+          <div class="input-group">
+            <input type="text" placeholder="People" class="form-control" name="keyword">
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="button">Go!</button>
+            </span>
+          </div>
+          <% end %>
+          <% end %>
+          </li>
           </ul>
-        </div>
-        
-      </div>
-    </nav>
+        </nav>
+
   </div>
 
   <div class="container" style="padding-top:60px">

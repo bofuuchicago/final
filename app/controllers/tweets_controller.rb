@@ -1,3 +1,6 @@
+require 'rubygems'
+require "pony"
+
 class TweetsController < ApplicationController
 
 	before_action :find_user
@@ -17,6 +20,7 @@ class TweetsController < ApplicationController
 	end
 	
 	def index
+
 		if params["user_id"].present?
 			@tweets = Tweet.where(user_id: params["user_id"]).limit(100)
 		else
@@ -32,6 +36,7 @@ class TweetsController < ApplicationController
 	def create
 		tweet = Tweet.new
 		tweet.content = params[:post_tweet]
+		tweet.image = params[:post_image]
 		tweet.date = DateTime.now.to_i
 		tweet.user_id = session["user_id"]
 		tweet.save
