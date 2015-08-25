@@ -31,119 +31,119 @@ User.create  id: 3,
 Tweet.delete_all
 
 Tweet.create  id: 1,
-              content: 'Lous challenge anyone???????',
-              date: 1425069955,
+              content: 'His song is so amazing... Leehom Wang!',
+              date: 1440538042,
               user_id: "1",
-              image: "http://ww1.sinaimg.cn/bmiddle/6973530djw1esi5icwcmuj20ji0yojua.jpg"
+              image: "https://upload.wikimedia.org/wikipedia/commons/4/44/Leehom_xmas_concert_at_piano.jpg"
 
 Tweet.create  id: 2,
-              content: 'An entire team of Apple developers was there 24/7 to help, so that was a wonderful resource to learn Swift and Objective C in a weekend.',
-              date: 1425069957,
+              content: 'Who knows this place? Its fascinating. Really hope I can go someday',
+              date: 1440538042,
               user_id: "2",
-              image: "http://ww4.sinaimg.cn/square/87246b09jw1esguiqhsjpj20zk0qodot.jpg" 
+              image: "https://www.ciee.org/teach/images/home/china.jpg" 
 
 
 Tweet.create  id: 3,
-              content: 'CSIL is once again selling discounted used computers and monitors for university students and staff! Models for sale are MacPro(2010), Shuttle, and 24" Apple LED Cinema Display. First come, first serve.',
-              date: 1425069955,
+              content: "This is my hometown Chengdu. It's home to giant panda. Chengdu is famous for people's relaxing life style. Welcome to Chengdu!",
+              date: 1440538042,
               user_id: "3" ,
-              image: "http://ww1.sinaimg.cn/thumbnail/6ac4d14dgw1esi2hn6vmdj20dw0dwdhr.jpg" 
+              image: "http://www.telegraph.co.uk/travel/hotel/article140475.ece/ALTERNATES/w620/chengdu8.jpg"
 
 Tweet.create  id: 4,
-              content: 'Went to an alum potluck, being the only student showing up with four alums around, which is pretty cool and actually the best alum event so far!',
-              date: 1425069955,
+              content: 'I like giant pandas. They look so cute!!!! I hope I can have one at home T_T',
+              date: 1440538042,
               user_id: "1",
-              image: "http://ww3.sinaimg.cn/bmiddle/4a23d069jw1esi60jgix6j20v815owoq.jpg"  
+              image: "http://images.mychinatours.com/tour/highlights/chengdu/chengdu-panda.jpg"  
 
 Tweet.create  id: 5,
-              content: 'Wish I could graduate again ‪#‎BadgerMemory‬',
-              date: 1425963490,
+              content: 'What do 1989 in this picture mean? Does it mean this photo was taken in 1989? I do not believe that‬',
+              date: 1440538042,
               user_id: "2",
-              image: "http://ww4.sinaimg.cn/square/005wlOCojw1esi2tymbxjj30zk0k042w.jpg"   
+              image: "http://s.newsweek.com/sites/www.newsweek.com/files/2014/10/26/image-1989.png"   
 
 Tweet.create  id: 6,
-              content: 'Lous challenge anyone???????',
-              date: 1425069955,
+              content: 'I watch this movie again and again. The God Father. Everyone should see this great movie!',
+              date: 1440538042,
               user_id: "1",
-              image: "http://ww1.sinaimg.cn/bmiddle/6973530djw1esi5icwcmuj20ji0yojua.jpg"
+              image: "https://d12vb6dvkz909q.cloudfront.net/uploads/galleries/24681/the-godfather-1.jpg"
 
 Tweet.create  id: 7,
-              content: 'An entire team of Apple developers was there 24/7 to help, so that was a wonderful resource to learn Swift and Objective C in a weekend.',
-              date: 1425069957,
+              content: 'What a cute cat!',
+              date: 1440538042,
               user_id: "2",
-              image: "http://ww4.sinaimg.cn/square/87246b09jw1esguiqhsjpj20zk0qodot.jpg" 
+              image: "http://animalfair.com/wp-content/uploads/2014/06/little_cute_cat_1920x1080.jpg" 
 
 
 Tweet.create  id: 8,
-              content: 'CSIL is once again selling discounted used computers and monitors for university students and staff! Models for sale are MacPro(2010), Shuttle, and 24" Apple LED Cinema Display. First come, first serve.',
-              date: 1425069955,
+              content: "Haven't gone to gym for a long time. Fat and ungly... Who can help me",
+              date: 14405380425,
               user_id: "3" ,
-              image: "http://ww1.sinaimg.cn/thumbnail/6ac4d14dgw1esi2hn6vmdj20dw0dwdhr.jpg" 
+              image: "http://www.lady8844.com/h031/h06/img201309101010231.jpg" 
 
 Tweet.create  id: 9,
-              content: 'Went to an alum potluck, being the only student showing up with four alums around, which is pretty cool and actually the best alum event so far!',
-              date: 1425069955,
+              content: 'Want a boy fiend!',
+              date: 1440538042,
               user_id: "1",
-              image: "http://ww3.sinaimg.cn/bmiddle/4a23d069jw1esi60jgix6j20v815owoq.jpg"  
+              image: "http://cimage.tianjimedia.com/uploadImages/2013/177/HA0J8M4H6PEI.jpg"  
 
 Tweet.create  id: 10,
-              content: 'Wish I could graduate again ‪#‎BadgerMemory‬',
-              date: 1425963490,
+              content: 'Cant like it more‬',
+              date: 1440538042,
               user_id: "2",
-              image: "http://ww4.sinaimg.cn/square/005wlOCojw1esi2tymbxjj30zk0k042w.jpg"                          
+              image: "http://www.mentorpl.org/wp-content/uploads/2015/06/plm20ilpgyltaarfswcs.jpg"                          
 
 
 Comment.delete_all
 
 Comment.create  id: 1,
-                content: 'You cant like your own post...',
-                date: 1431983183,
+                content: 'What is your phone number?',
+                date: 1440538042,
                 tweet_id: 1,
                 user_id: 1
 
 Comment.create  id: 2,
-                content: 'I must have been a little drunk',
-                date: 1431983197,
+                content: 'I hope I can see him myself',
+                date: 1440538042,
                 tweet_id: 1,
                 user_id: 2
 
 
 Comment.create  id: 3,
-                content: 'That was at hydrate',
-                date: 1431983352,
+                content: 'My favorite singer',
+                date: 1440538042,
                 tweet_id: 1,
                 user_id: 3
 
 
 Comment.create  id: 4,
-                content: 'I heard you bumped into Alex in Chicago lol, the world is too small!',
-                date: 1431983363,
+                content: 'Did you listen to his song Forever Love? It is definitely the beautiful',
+                date: 1440538042,
                 tweet_id: 1,
                 user_id: 3
 
 Comment.create  id: 5,
-                content: 'You cant like your own post...',
-                date: 1431983183,
+                content: 'I think it is a temple. Not sure where it is',
+                date: 1440538042,
                 tweet_id: 2,
                 user_id: 1
 
 Comment.create  id: 6,
-                content: 'I must have been a little drunk',
-                date: 1431983197,
+                content: 'It is called Jingyun temple near the Xiling snow montain',
+                date: 1440538042,
                 tweet_id: 2,
                 user_id: 2
 
 
 Comment.create  id: 7,
-                content: 'That was at hydrate',
-                date: 1431983352,
+                content: 'I like the style of this picture',
+                date: 1440538042,
                 tweet_id: 3,
                 user_id: 3
 
 
 Comment.create  id: 8,
-                content: 'I heard you bumped into Alex in Chicago lol, the world is too small!',
-                date: 1431983363,
+                content: 'I miss my home. When can I visit my Chengdu again?',
+                date: 1440538042,
                 tweet_id: 3,
                 user_id: 3
 
@@ -178,64 +178,64 @@ Follow.create   fan_id: 3,
 Message.delete_all
 
 Message.create  id:1,
-                content: "Hahahaha. That's funny. Yeah. I might have to buy a new one tmr",
-                date: 1432931316,
+                content: "Hi! Can I add you contact?",
+                date: 1440538042,
                 sender_id: 3,
                 receiver_id: 2,
                 connection_id: 1,
                 is_read: false
 
 Message.create  id:2,
-                content: "Oh hey. All of my friends are friends with you now.",
-                date: 1432931383,
+                content: "It was nice to meet you yesterday. Can we share phone number?",
+                date: 1440538042,
                 sender_id: 2,
                 receiver_id: 3,
                 connection_id: 1,                
                 is_read: false
 
 Message.create  id:3,
-                content: "Haha. Yay!",
-                date: 1432931454,
+                content: "Ok. Sure",
+                date: 1440538042,
                 sender_id: 3,
                 receiver_id: 2,
                 connection_id: 1,                
                 is_read: false     
 
 Message.create  id:4,
-                content: "My old one got wet and fried a few months ago",
-                date: 1432931529,
+                content: "My phone number is 312-778-1354",
+                date: 1440538042,
                 sender_id: 2,
                 receiver_id: 3,
                 connection_id: 1,                
                 is_read: false   
 
 Message.create  id:5,
-                content: "Hahahaha. That's funny. Yeah. I might have to buy a new one tmr",
-                date: 1432931316,
+                content: "I have sent you a message. DId you receive that",
+                date: 1440538042,
                 sender_id: 3,
                 receiver_id: 1,
                 connection_id: 2,
                 is_read: false
 
 Message.create  id:6,
-                content: "Oh hey. All of my friends are friends with you now.",
-                date: 1432931383,
+                content: "Nope. There must be something wrong",
+                date: 1440538042,
                 sender_id: 1,
                 receiver_id: 3,
                 connection_id: 2,                
                 is_read: false
 
 Message.create  id:7,
-                content: "Haha. Yay!",
-                date: 1432931454,
+                content: "Oh, I sent to another guy ... sign",
+                date: 1440538042,
                 sender_id: 3,
                 receiver_id: 1,
                 connection_id: 2,                
                 is_read: false     
 
 Message.create  id:8,
-                content: "My old one got wet and fried a few months ago",
-                date: 1432931529,
+                content: "Haha, you should apologize to him(her)",
+                date: 1440538042,
                 sender_id: 1,
                 receiver_id: 3,
                 connection_id: 2,                
@@ -247,14 +247,14 @@ Connection.delete_all
 Connection.create id:1,
                   user_one_id:3,
                   user_two_id:2,
-                  date: 1432931529,
-                  last_message: "My old one got wet and fried a few months ago"
+                  date: 1440538042,
+                  last_message: "connection1"
 
 Connection.create id:2,
                   user_one_id:1,
                   user_two_id:3,
-                  date: 1432931549,
-                  last_message: "My old one got wet and fried a few months ago"    
+                  date: 1440538042,
+                  last_message: "connection2"    
                                  
 
 # This file should contain all the record creation needed to seed the database with its default values.
