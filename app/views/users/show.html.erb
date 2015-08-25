@@ -1,11 +1,18 @@
 <div class="jumbotron">
-	
-<h3>Protrait: <%= image_tag @user.image, class: "protrait"%></h3>
 
-<h3>Username: <%= @user.username %></h3>
 
-<h3>Email: <%= @user.email %></h3>
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Personal Information</div>
+  <div class="panel-body">
+    <p>Protrait: <%= image_tag @user.image, class: "protrait"%></p>
+  </div>
 
-<h3><%= link_to "edit", edit_user_path(@user.id), class: "btn btn-info"%></h3>
-
+  <!-- List group -->
+  <ul class="list-group">
+    <li class="list-group-item">Username: <%= @user.username %></li>
+    <li class="list-group-item">Email: <%= @user.email %></li>
+    <li class="list-group-item"><%= link_to "edit", edit_user_path(@user.id), class: "btn btn-info"%></li>
+  </ul>
+</div>	
 </div>

@@ -1,26 +1,32 @@
 
-<div class="col-xs-6">
-
+<div class="panel panel-default">
+<table class="table">
+<tr>
+  <th>user name</th>
+  <th>status</th>
+</tr>
 <% @user.followees.each do |followee| %>
-
-	<%= followee.username %>
-	<br>
-	<a href="">follow me</a>
-	<br>
-
+  <tr>
+	<td><%= followee.username %></td>
+	<td><a href="">watching me</a></td>
+  </tr>
 <% end %>
-	
+</table>
+
 </div>
 
-<div class="col-cs-6">
-
+<div class="panel panel-default">
+<table class="table">
+<tr>
+  <th>user name</th>
+  <th>status</th>
+</tr>
 <% @user.followers.each do |follower| %>
+  <tr>
+	<td><%= follower.username %></td>
+	<td><a href="">I'm watching</a></td>
+  </tr>
+<% end %>
+</table>
 
-	<%= follower.username %>
-	<br>
-	<a href="">I follow</a>
-	<br>
-
-<% end %> 
-	
 </div>

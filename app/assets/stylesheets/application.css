@@ -23,6 +23,12 @@
  	max-height:40px;
  	border-radius: 25px;
  }
+ 
+ .photo{
+ 	max-width:80px;
+ 	max-height:80px;
+ 	border-radius: 25px;
+ }
 
  .post-tweet{
  	width: 100%;
