@@ -43,17 +43,17 @@ class SessionsController < ApplicationController
         session["user_id"] = user.id
         session["username"] = user.username
         session["user_image"] = user.image
-        redirect_to root_url, notice: "Welcome back!"
+        redirect_to root_url
       else
         redirect_to root_url, notice: "Password error."
       end
     else
-      redirect_to root_url, notice: "Unknown email."
+      redirect_to root_url, notice: "Invalid Username."
     end
   end
 
   def destroy
 		session.delete :user_id
-		redirect_to root_url, notice: "Thanks for visiting" 	
+		redirect_to root_url, notice: "Thanks for visiting. Bye!" 	
   end
 end

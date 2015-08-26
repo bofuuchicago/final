@@ -102,7 +102,7 @@ Comment.create  id: 1,
                 user_id: 1
 
 Comment.create  id: 2,
-                content: 'I hope I can see him myself',
+                content: 'Leehom!',
                 date: 1440538042,
                 tweet_id: 1,
                 user_id: 2
@@ -116,7 +116,7 @@ Comment.create  id: 3,
 
 
 Comment.create  id: 4,
-                content: 'Did you listen to his song Forever Love? It is definitely the beautiful',
+                content: 'Did you listen to his song Forever Love? It is definitely beautiful',
                 date: 1440538042,
                 tweet_id: 1,
                 user_id: 3
@@ -255,12 +255,4 @@ Connection.create id:2,
                   user_two_id:3,
                   date: 1440538042,
                   last_message: "connection2"    
-                                 
-
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+      
